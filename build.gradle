@@ -10,6 +10,7 @@ sourceCompatibility = 11
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
+
 repositories {
     mavenCentral()
 }
@@ -19,8 +20,10 @@ dependencies {
     testImplementation 'com.codeborne:selenide:6.17.2'
 }
 
+
 test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
+
 }
